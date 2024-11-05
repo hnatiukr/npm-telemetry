@@ -1,0 +1,16 @@
+# telemetry
+/db
+/__buffer__
+
+# rescript
+/lib
+/src/**/*.res.mjs
+
+# dependencies
+/node_modules
+
+# misc
+.DS_Store
+
+# local env files
+.env

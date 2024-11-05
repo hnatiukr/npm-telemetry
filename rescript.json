@@ -1,0 +1,35 @@
+{
+  "name": "npm-telemetry",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "reason": {
+    "react-jsx": 3
+  },
+  "jsx": {
+    "mode": "automatic"
+  },
+  "suffix": ".res.mjs",
+  "package-specs": [
+    {
+      "module": "esmodule",
+      "in-source": true
+    }
+  ],
+  "gentypeconfig": {
+    "module": "esmodule",
+    "moduleResolution": "node",
+    "generatedFileExtension": ".d.ts"
+  },
+  "bsc-flags": ["-open RescriptCore", "-open NodeJs"],
+  "bs-dependencies": [
+    "@rescript/core",
+    "@rescript/react",
+    "rescript-nodejs",
+    "rescript-webapi",
+    "rescript-express"
+  ]
+}

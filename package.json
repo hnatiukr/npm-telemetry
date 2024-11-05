@@ -1,0 +1,40 @@
+{
+  "name": "npm-telemetry",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "res:clean": "rescript clean",
+    "res:format": "rescript format -all",
+    "res:build": "rescript",
+    "res:dev": "rescript -w",
+    "vite:build": "vite build",
+    "vite:serve": "vite preview",
+    "vite:start": "vite",
+    "db:clean": "rm -rf db __buffer__",
+    "agent:start": "node --env-file=.env src/agent/Agent.res.mjs",
+    "agent:cold-start": "npm run db:clean && npm run res:clean && npm run res:build && npm run agent:start",
+    "server": "nodemon src/server/Server.res.mjs"
+  },
+  "devDependencies": {
+    "@babel/parser": "7.25.6",
+    "@babel/runtime": "7.25.6",
+    "@babel/traverse": "7.25.6",
+    "@jihchi/vite-plugin-rescript": "6.0.0",
+    "@rescript/core": "1.5.2",
+    "@rescript/react": "0.13.0",
+    "@vitejs/plugin-react": "4.3.0",
+    "better-sqlite3": "11.3.0",
+    "dompurify": "3.1.6",
+    "express": "4.21.0",
+    "nodemon": "3.1.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "rescript": "11.1.1",
+    "rescript-express": "0.4.1",
+    "rescript-nodejs": "16.1.0",
+    "rescript-webapi": "0.9.1",
+    "ts-pattern": "5.3.1",
+    "vite": "5.2.12"
+  }
+}
